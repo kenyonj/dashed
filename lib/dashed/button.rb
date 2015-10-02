@@ -1,5 +1,6 @@
 require "pcaprub"
 require "time"
+require "dashed/packet"
 
 module Dashed
   class Button
