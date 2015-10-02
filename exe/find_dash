@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'pcaprub'
+require_relative '../lib/dashed/packet'
+
+interface = ARGV[0]
+
+if interface
+  capture = PCAPRUB::Pcap.open_live(interface, 65535, true, 0)
+  capture.setfilter("arp")
+
+  capture.each_packet do |raw_packet|
+    packet = Dashed::Packet.new(raw_packet)
+    if packet.host_mac_address.start_with? "74:75"
+      puts "Potential Amazon Dash Button #{packet.host_mac_address}"
+    end
+  end
+else
+  puts "You must provide an interface"
+end
