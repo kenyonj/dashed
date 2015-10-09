@@ -9,6 +9,13 @@ Just add `dashed` to your Gemfile and then run `bundle install`.
 Dashed has to be run with root permissions in order to listen to your network
 devices to pick up your dash button.
 
+## Preparing the buttons
+
+In order to use your [dash buttons](http://www.amazon.com/oc/dash-button) with this library, you will need to set them up using Amazon's setup process. While you can automatically order products using the buttons, if you'd like to prevent the automatic ordering of a product, simply stop the  registration process before choosing a product.
+
+It is recommended that you read [this post](https://medium.com/@edwardbenson/how-i-hacked-amazon-s-5-wifi-button-to-track-baby-data-794214b0bdd8) on Medium by Edward Benson describing how he uses the buttons. The article walks you through the process of getting the buttons set up; once you have reached the point that the button is connected through WiFi, this gem will take you the rest of the way!
+
+
 ## Usage
 
 Dashed includes the `find_dash` executable which looks for Amazon Dash buttons
