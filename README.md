@@ -37,6 +37,12 @@ Please be aware that `on_press` blocks the execution of the current
 thread. If you don't want it to block please create the button in its own
 thread.
 
+## Known Issues
+
+ - Buttons can not be sniffed out on some OS X machines
+ - Some buttons seem to have a different version of the Amazon Dash button
+   software that render them useless for this.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
