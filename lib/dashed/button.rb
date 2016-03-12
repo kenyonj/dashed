@@ -37,7 +37,7 @@ module Dashed
     end
 
     def duplicate_arp?
-      last_press && (last_press - Time.now).abs < 45
+      last_press && (last_press - Time.now).abs < @timeout
     end
   end
 end
