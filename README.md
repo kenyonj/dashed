@@ -40,7 +40,6 @@ thread.
 ## Known Issues
 
  - Buttons can not be sniffed out on some OS X machines
-   software that render them useless for this.
 
 ## Contributing
 
