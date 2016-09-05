@@ -4,6 +4,11 @@ require 'pcaprub'
 require_relative '../lib/dashed/packet'
 
 interface = ARGV[0]
+DASH_PREFIX = ['74::74', '44:65']
+
+def valid_prefix? mac
+  !!DASH_PREFIX.any? { |p| mac.start_with? p }
+end
 
 if interface
   capture = PCAPRUB::Pcap.open_live(interface, 65535, true, 0)
@@ -11,7 +16,7 @@ if interface
 
   capture.each_packet do |raw_packet|
     packet = Dashed::Packet.new(raw_packet)
-    if packet.host_mac_address.start_with? "74:75"
+    if valid_prefix?(packet.host_mac_address)
       puts "Potential Amazon Dash Button #{packet.host_mac_address}"
     end
   end
