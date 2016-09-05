@@ -6,8 +6,8 @@ require 'dashed/version'
 Gem::Specification.new do |spec|
   spec.name          = "dashed"
   spec.version       = Dashed::VERSION
-  spec.authors       = ["Justin Kenyon", "Blake Williams"]
-  spec.email         = ["kenyonj@gmail.com", "blake@blakewilliams.me"]
+  spec.authors       = ["Justin Kenyon", "Blake Williams", 'Robert Müller']
+  spec.email         = ["kenyonj@gmail.com", "blake@blakewilliams.me", 'code@brauser.io']
 
   spec.summary       = %q{Library for interacting with Amazon Dash buttons}
   spec.description   = %q{Library for interacting with Amazon Dash buttons}
