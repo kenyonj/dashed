@@ -40,7 +40,6 @@ thread.
 ## Known Issues
 
  - Buttons can not be sniffed out on some OS X machines
- - Some buttons seem to have a different version of the Amazon Dash button
    software that render them useless for this.
 
 ## Contributing
